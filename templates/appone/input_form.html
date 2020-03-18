@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "appone/baseAppone.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+{% block body %}
+<div class="container">
+    <h1>this is form</h1>
+    <div class="container">
+        <form method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input class="btn btn-dark" type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>
